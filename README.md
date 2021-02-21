@@ -1,0 +1,1 @@
+# Aidemy研修用コンテンツ - PythonによるExcelの自動化

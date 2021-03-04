@@ -3,10 +3,10 @@ import openpyxl
 wb = openpyxl.load_workbook('売上報告書.xlsx', data_only=True)
 sheet = wb['売上データ']
 
-sales_list_by_branch = []
+branch_list = list(sheet.columns)[2]
 sales_by_a, sales_by_b, sales_by_c = 0, 0, 0
 
-for i, cell in enumerate(list(sheet.columns)[2]):
+for i, cell in enumerate(branch_list):
     if cell.value == "A支店":
         sales_by_a += sheet.cell(row=i + 1, column=8).value
     elif cell.value == "B支店":
